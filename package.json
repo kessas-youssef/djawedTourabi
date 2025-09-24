@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@tailwindcss/vite": "^4.1.13",
+    "gsap": "^3.13.0",
     "lucide-react": "^0.544.0",
+    "motion": "^12.23.21",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-lite-youtube-embed": "^2.5.6",

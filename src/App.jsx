@@ -5,6 +5,7 @@ import afficheSecond from './assets/djawedTourabi/djawed affiche second.webp'
 import visage from './assets/djawedTourabi/visage.webp'
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import TrueFocus from './TrueFocus';
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -71,12 +72,12 @@ const App = () => {
       rating: 5
     },
     {
-      name: "Karim Mansouri",
+      name: "Anonyme",
       text: "Enfin un humoriste qui parle notre langue ! Intelligent, drôle et authentique.",
       rating: 5
     },
     {
-      name: "Amina Cherif",
+      name: "Anonyme",
       text: "J'ai rarement autant ri ! Djawed maîtrise parfaitement son art. Bravo !",
       rating: 5
     }
@@ -119,14 +120,14 @@ const App = () => {
                 <Play className="inline mr-2" size={20} />
                 Voir le Trailer
               </button> */}
-              <a target='_blank' href='#apropos' className=" hidden border-2 border-[#FDF0D5] text-[#FDF0D5] hover:bg-[#FDF0D5] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 md:flex justify-center items-center">
+              <a href='#apropos' className=" hidden border-2 border-[#FDF0D5] text-[#FDF0D5] hover:bg-[#FDF0D5] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 md:flex justify-center items-center">
                 <Info className="inline" size={20} />
               </a>
-              <a target='_blank' href='#dateTournee' className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105">
+              <a href='#dateTournee' className="border-2 text-yellow-400 border-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
                 <Calendar className="inline mr-2" size={20} />
                 Voir les Dates
               </a>
-              <a target='_blank' href='#apropos' className=" hidden border-2 border-[#C6D8D3] text-[#C6D8D3] hover:bg-[#C6D8D3] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 md:flex justify-center items-center">
+              <a href='#galery' className=" hidden border-2 border-[#C6D8D3] text-[#C6D8D3] hover:bg-[#C6D8D3] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 md:flex justify-center items-center">
                 <Youtube className="inline" size={20} />
               </a>
             </div>
@@ -146,7 +147,8 @@ const App = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-white mb-6">À Propos de Djawed</h2>
+              {/* <h2 className="text-4xl font-bold text-white mb-6">À Propos de Djawed</h2> */}
+              <TrueFocus sentence='À Propos de Djawed' borderColor='oklch(85.2% 0.199 91.936)' />
               <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                 Djawed Tourabi est humoriste et comédien de stand-up. Depuis 2022, il monte sur scène pour partager son regard aiguisé – et souvent drôle – sur la société et sur lui-même.
               </p>
@@ -219,7 +221,7 @@ const App = () => {
                   <div className="flex items-center">
                     <Calendar className="mr-3 text-yellow-500" size={18} />
                     <span className='mr-3'>{show.date}</span>
-                    <LucideMousePointerClick className='animate-pulse w-1/3'  />
+                    <LucideMousePointerClick className='animate-pulse w-1/3' />
                   </div>
                   <div className="flex items-center">
                     <Clock className="mr-3 text-yellow-500" size={18} />
@@ -231,7 +233,7 @@ const App = () => {
                   <div className="mt-6 pt-4 border-t border-gray-600">
                     <div className="flex items-center mb-3 text-gray-300">
                       <Phone className="mr-3 text-green-500" size={18} />
-                      <span>{show.phone}</span>
+                      <a href={`tel:${show.phone}`} target='_blank'>{show.phone}</a>
                     </div>
                     {
                       show.reservationLink
@@ -274,7 +276,7 @@ const App = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20">
+      <section className="py-20" id='galery'>
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Galerie</h2>
