@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Calendar, MapPin, Clock, Phone, ExternalLink, Play, Users, Star, Mail, Instagram, Facebook, Youtube, LucideMousePointerClick, Info } from 'lucide-react';
+import { Calendar, MapPin, Clock, Phone, ExternalLink, Users, Star, Mail, Instagram, Facebook, Youtube, LucideMousePointerClick, Info } from 'lucide-react';
 import affichePrincipale from './assets/djawedTourabi/djawed affiche sans text.webp'
 import afficheSecond from './assets/djawedTourabi/djawed affiche second.webp'
 import visage from './assets/djawedTourabi/visage.webp'
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-import TrueFocus from './TrueFocus';
+import FadeInWhenVisible from './FadeInOnView';
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -93,62 +93,66 @@ const App = () => {
       }}
     >
       {/* Landing Section */}
-      <section
-        className="relative h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${affichePrincipale}')`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center'
-        }}
-      >
-        <div className="text-center text-white z-10 max-w-4xl px-6 h-full flex gap-[40vh] flex-col justify-evenly">
-          <h1 style={{ textShadow: '1px 1px 5px black' }} className="text-6xl md:text-8xl font-bold mb-6 text-[#657874]">
-            DJAWED TOURABI
-          </h1>
+      <FadeInWhenVisible before={'opacity-0'} after={'opacity-100'}>
+        <section
+          className="relative h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${affichePrincipale}')`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center'
+          }}
+        >
+          <div className="text-center text-white z-10 max-w-4xl px-6 h-full flex gap-[40vh] flex-col justify-evenly">
+            <h1 style={{ textShadow: '1px 1px 5px black' }} className="text-6xl md:text-8xl font-bold mb-6 text-[#657874]">
+              DJAWED TOURABI
+            </h1>
 
-          <div>
-            <div className="mb-8">
-              <h2 className="text-3xl md:text-5xl mb-4 text-gray-400 courier-prime-bold">
-                "Andi Swalah Ngoulhoum"
-              </h2>
+            <div>
+              <div className="mb-8">
+                <h2 className="text-3xl md:text-5xl mb-4 text-gray-400 courier-prime-bold">
+                  "Andi Swalah Ngoulhoum"
+                </h2>
 
-            </div>
-            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-              {/* Trailer Button */}
-              {/* <button className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
-                <Play className="inline mr-2" size={20} />
-                Voir le Trailer
-              </button> */}
-              <a href='#apropos' className=" hidden border-2 border-[#FDF0D5] text-[#FDF0D5] hover:bg-[#FDF0D5] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 md:flex justify-center items-center">
-                <Info className="inline" size={20} />
-              </a>
-              <a href='#dateTournee' className="border-2 text-yellow-400 border-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
-                <Calendar className="inline mr-2" size={20} />
-                Voir les Dates
-              </a>
-              <a href='#galery' className=" hidden border-2 border-[#C6D8D3] text-[#C6D8D3] hover:bg-[#C6D8D3] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 md:flex justify-center items-center">
-                <Youtube className="inline" size={20} />
-              </a>
+              </div>
+              <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+                {/* Trailer Button */}
+                {/* <button className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+                  <Play className="inline mr-2" size={20} />
+                  Voir le Trailer
+                </button> */}
+                <a href='#apropos' className=" hidden border-2 border-[#FDF0D5] text-[#FDF0D5] hover:bg-[#FDF0D5] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 md:flex justify-center items-center">
+                  <Info className="inline" size={20} />
+                </a>
+                <a href='#dateTournee' className="border-2 text-yellow-400 border-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
+                  <Calendar className="inline mr-2" size={20} />
+                  Voir les Dates
+                </a>
+                <a href='#galery' className=" hidden border-2 border-[#C6D8D3] text-[#C6D8D3] hover:bg-[#C6D8D3] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 md:flex justify-center items-center">
+                  <Youtube className="inline" size={20} />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Floating elements animation */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none hidden">
-          <div className="absolute top-20 left-10 text-yellow-400 text-6xl animate-bounce">😂</div>
-          <div className="absolute top-40 right-20 text-orange-400 text-4xl animate-pulse">🎭</div>
-          <div className="absolute bottom-32 left-20 text-purple-400 text-5xl animate-bounce">🤣</div>
-        </div>
-      </section>
+          {/* Floating elements animation */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none hidden">
+            <div className="absolute top-20 left-10 text-yellow-400 text-6xl animate-bounce">😂</div>
+            <div className="absolute top-40 right-20 text-orange-400 text-4xl animate-pulse">🎭</div>
+            <div className="absolute bottom-32 left-20 text-purple-400 text-5xl animate-bounce">🤣</div>
+          </div>
+        </section>
+      </FadeInWhenVisible>
 
       {/* About Section */}
       <section id='apropos' className="py-20 bg-gray-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              {/* <h2 className="text-4xl font-bold text-white mb-6">À Propos de Djawed</h2> */}
-              <TrueFocus sentence='À Propos de Djawed' borderColor='oklch(85.2% 0.199 91.936)' />
+              <FadeInWhenVisible before={'opacity-0'} after={'opacity-100'}>
+                <h2 className="text-4xl font-bold text-white mb-6">À Propos de Djawed</h2>
+              </FadeInWhenVisible>
+              {/* <TrueFocus sentence='À Propos de Djawed' borderColor='oklch(85.2% 0.199 91.936)' /> */}
               <p className="text-gray-300 text-lg mb-6 leading-relaxed">
                 Djawed Tourabi est humoriste et comédien de stand-up. Depuis 2022, il monte sur scène pour partager son regard aiguisé – et souvent drôle – sur la société et sur lui-même.
               </p>
@@ -175,11 +179,13 @@ const App = () => {
               </div>
             </div>
             <div className="relative">
-              <img
-                src={visage}
-                alt="Djawed Tourabi"
-                className="rounded-lg shadow-2xl w-full"
-              />
+              <FadeInWhenVisible before={'rounded-[100%] skew-12'} after={'rounded-lg skew-0'}>
+                <img
+                  src={visage}
+                  alt="Djawed Tourabi"
+                  className="shadow-2xl w-full"
+                />
+              </FadeInWhenVisible>
               <div className="absolute -bottom-6 -right-6 bg-yellow-500 text-black p-4 rounded-full">
                 <Users size={32} />
               </div>
@@ -195,7 +201,7 @@ const App = () => {
       >
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-4" id='dateTournee'>Dates de Tournée</h2>
+            <FadeInWhenVisible before={'opacity-0'} after={'opacity-100'}><h2 className="text-5xl font-bold text-white mb-4" id='dateTournee'>Dates de Tournée</h2></FadeInWhenVisible>
             <p className="text-xl text-gray-300">Ne ratez pas "Andi Swalah Ngoulhoum" dans votre ville !</p>
           </div>
 
@@ -255,7 +261,7 @@ const App = () => {
       <section className="py-20 bg-gray-800">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Ce Que Disent les Spectateurs</h2>
+            <FadeInWhenVisible before={'opacity-0'} after={'opacity-100'}><h2 className="text-4xl font-bold text-white mb-4">Ce Que Disent les Spectateurs</h2></FadeInWhenVisible>
             <p className="text-xl text-gray-400">Des rires garantis à chaque représentation !</p>
           </div>
 
@@ -279,7 +285,7 @@ const App = () => {
       <section className="py-20" id='galery'>
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Galerie</h2>
+            <FadeInWhenVisible before={'opacity-0'} after={'opacity-100'}><h2 className="text-4xl font-bold text-white mb-4">Galerie</h2></FadeInWhenVisible>
             <p className="text-xl text-gray-400">Quelques moments magiques sur scène</p>
           </div>
 
@@ -308,7 +314,7 @@ const App = () => {
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-[#657874] to--800">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold text-white mb-8">Restons en Contact</h2>
+          <FadeInWhenVisible before={'opacity-0'} after={'opacity-100'}><h2 className="text-4xl font-bold text-white mb-8">Restons en Contact</h2></FadeInWhenVisible>
           <p className="text-xl text-gray-300 mb-12">
             Suivez Djawed pour ne rien rater de ses prochains spectacles et de ses actualités !
           </p>
