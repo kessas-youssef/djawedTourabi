@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Calendar, MapPin, Clock, Phone, ExternalLink, Users, Star, Mail, Instagram, Facebook, Youtube, LucideMousePointerClick, Info } from 'lucide-react';
-import affichePrincipale from './assets/djawedTourabi/djawed affiche sans text.webp'
+import affichePrincipale from './assets/djawedTourabi/djawed affiche sans text HQ.webp'
+import affichePrincipaleLQ from './assets/djawedTourabi/djawed affiche sans text.webp'
 import afficheSecond from './assets/djawedTourabi/djawed affiche second.webp'
 import visage from './assets/djawedTourabi/visage.webp'
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
@@ -97,7 +98,7 @@ const App = () => {
         <section
           className="relative h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900"
           style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('${affichePrincipale}')`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${affichePrincipaleLQ})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center'
@@ -115,20 +116,20 @@ const App = () => {
                 </h2>
 
               </div>
-              <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+              <div className="flex md:flex-row gap-4 justify-center items-center">
                 {/* Trailer Button */}
                 {/* <button className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
                   <Play className="inline mr-2" size={20} />
                   Voir le Trailer
                 </button> */}
-                <a href='#apropos' className=" hidden border-2 border-[#FDF0D5] text-[#FDF0D5] hover:bg-[#FDF0D5] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 md:flex justify-center items-center">
+                <a href='#apropos' className="  border-2 border-[#FDF0D5] text-[#FDF0D5] hover:bg-[#FDF0D5] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
                   <Info className="inline" size={20} />
                 </a>
-                <a href='#dateTournee' className="border-2 text-yellow-400 border-yellow-400 hover:bg-yellow-400 hover:text-black px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
-                  <Calendar className="inline mr-2" size={20} />
-                  Voir les Dates
+                <a href='#dateTournee' className="border-2 text-yellow-400 border-yellow-400 hover:bg-yellow-400 hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
+                  <Calendar className="inline md:mr-2" size={20} />
+                  <span className='hidden md:inline'>Voir les Dates</span>
                 </a>
-                <a href='#galery' className=" hidden border-2 border-[#C6D8D3] text-[#C6D8D3] hover:bg-[#C6D8D3] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 md:flex justify-center items-center">
+                <a href='#galery' className="border-2 border-[#C6D8D3] text-[#C6D8D3] hover:bg-[#C6D8D3] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
                   <Youtube className="inline" size={20} />
                 </a>
               </div>
@@ -145,7 +146,7 @@ const App = () => {
       </FadeInWhenVisible>
 
       {/* About Section */}
-      <section id='apropos' className="py-20 bg-gray-800">
+      <section id='apropos' className="py-20 bg-gray-800 overflow-clip">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
