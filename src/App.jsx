@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Calendar, MapPin, Clock, Phone, ExternalLink, Users, Star, Mail, Instagram, Facebook, Youtube, LucideMousePointerClick, Info } from 'lucide-react';
-import affichePrincipale from './assets/djawedTourabi/djawed affiche sans text HQ.webp'
 import affichePrincipaleLQ from './assets/djawedTourabi/djawed affiche sans text.webp'
 import afficheSecond from './assets/djawedTourabi/djawed affiche second.webp'
 import visage from './assets/djawedTourabi/visage.webp'
