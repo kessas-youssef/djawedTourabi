@@ -3,8 +3,8 @@ import { Calendar, MapPin, Clock, Phone, ExternalLink, Users, Star, Mail, Instag
 import affichePrincipaleLQ from './assets/djawedTourabi/djawed affiche sans text.webp'
 import afficheSecond from './assets/djawedTourabi/djawed affiche second.webp'
 import visage from './assets/djawedTourabi/visage.webp'
-import LiteYouTubeEmbed from "react-lite-youtube-embed";
-import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+// import LiteYouTubeEmbed from "react-lite-youtube-embed";
+// import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -300,10 +300,10 @@ const App = () => {
               ['Ow19FdmCdYY', 'Il était très chelou le mec']
             ].map((i) => (
               <div key={i} className="relative group rounded-xl overflow-clip">
-                <LiteYouTubeEmbed
+                {/* <LiteYouTubeEmbed
                   id={i[0]}
                   title={i[1]}
-                />
+                /> */}
               </div>
             ))}
           </div>
