@@ -4,7 +4,6 @@ import affichePrincipaleLQ from './assets/djawedTourabi/djawed affiche sans text
 import visage from './assets/djawedTourabi/visage.webp'
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
-import FadeInWhenVisible from './FadeInOnView';
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -88,7 +87,7 @@ const App = () => {
       <section
         className="relative h-screen flex items-center justify-center"
       >
-        <FadeInWhenVisible before={'opacity-0'} after={'opacity-100'}>
+        
           {/* Background image */}
 
           <img
@@ -154,7 +153,6 @@ const App = () => {
             <div className="absolute top-40 right-20 text-orange-400 text-4xl animate-pulse">🎭</div>
             <div className="absolute bottom-32 left-20 text-purple-400 text-5xl animate-bounce">🤣</div>
           </div>
-        </FadeInWhenVisible>
       </section>
 
 
