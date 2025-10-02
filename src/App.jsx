@@ -4,6 +4,7 @@ import affichePrincipaleLQ from './assets/djawedTourabi/djawed affiche sans text
 import visage from './assets/djawedTourabi/visage.webp'
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import FadeInWhenVisible from './FadeInOnView';
 
 const App = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -16,16 +17,16 @@ const App = () => {
       date: "09 Octobre 2025",
       time: "19h00",
       phone: "0560 76 54 06",
-      reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr/event/djawed-tourabi"
+      reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr/events?keyword=Djawed+Tourabi&category=&country=&location=&pricemin=0&pricemax=10000"
     },
-    {
-      id: 2,
-      place: "Artissimo",
-      city: "Alger",
-      date: "23 Octobre 2025",
-      time: "20h00",
-      phone: "070 49 28 41"
-    },
+    // {
+    //   id: 2,
+    //   place: "Artissimo",
+    //   city: "Alger",
+    //   date: "23 Octobre 2025",
+    //   time: "20h00",
+    //   phone: "070 49 28 41"
+    // },
     {
       id: 3,
       place: "Théâtre la Fourmi",
@@ -33,24 +34,24 @@ const App = () => {
       date: "13 Novembre 2025",
       time: "18h30",
       phone: "0560 76 54 06",
-      reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr/event/djawed-tourabi "
+      reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr/events?keyword=Djawed+Tourabi&category=&country=&location=&pricemin=0&pricemax=10000 "
     },
-    {
-      id: 4,
-      place: "Hôtel Ibis",
-      city: "Tlemcen",
-      date: "Bientot !",
-      time: "-",
-      phone: "07 ** ** ** **"
-    },
-    {
-      id: 5,
-      place: "Artissimo",
-      city: "Alger",
-      date: "27 Novembre 2025",
-      time: "20h00",
-      phone: "0770 49 28 41"
-    },
+    // {
+    //   id: 4,
+    //   place: "Hôtel Ibis",
+    //   city: "Tlemcen",
+    //   date: "Bientot !",
+    //   time: "-",
+    //   phone: "07 ** ** ** **"
+    // },
+    // {
+    //   id: 5,
+    //   place: "Artissimo",
+    //   city: "Alger",
+    //   date: "27 Novembre 2025",
+    //   time: "20h00",
+    //   phone: "0770 49 28 41"
+    // },
     {
       id: 6,
       place: "Théâtre la Fourmi",
@@ -58,7 +59,7 @@ const App = () => {
       date: "18 Décembre 2025",
       time: "18h00",
       phone: "0560 76 54 06",
-      reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr/event/djawed-tourabi "
+      reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr/events?keyword=Djawed+Tourabi&category=&country=&location=&pricemin=0&pricemax=10000 "
     }
   ];
 
@@ -84,62 +85,76 @@ const App = () => {
   return (
     <div className="min-h-screen">
       {/* Landing Section */}
-
       <section
-        className="relative h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900"
-
+        className="relative h-screen flex items-center justify-center"
       >
-        <img
-          src={affichePrincipaleLQ}
-          alt="Background"
-          style={{
-            width: '100%',
-            height: 'auto',
-            objectFit: 'cover',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            zIndex: -1
-          }}
-        />
-        <div className="text-center text-white z-10 max-w-4xl px-6 h-full flex gap-[40vh] flex-col justify-evenly">
-          <h1 style={{ textShadow: '1px 1px 5px black' }} className="text-6xl md:text-8xl font-bold mb-6 text-[#657874]">
-            DJAWED TOURABI
-          </h1>
+        <FadeInWhenVisible before={'opacity-0'} after={'opacity-100'}>
+          {/* Background image */}
 
-          <div>
-            <div className="mb-8">
-              <h2 className="text-3xl md:text-5xl mb-4 text-gray-400 courier-prime-bold">
-                "Andi Swalah Ngoulhoum"
-              </h2>
+          <img
+            src={affichePrincipaleLQ}
+            alt="Background"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              zIndex: -1
+            }}
+          />
+          {/* Gradient overlay */}
+          <div
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4))',
+              zIndex: -1
+            }}
+          />
 
-            </div>
-            <div className="flex md:flex-row gap-4 justify-center items-center">
-              {/* Trailer Button */}
-              {/* <button className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+
+
+          <div className="text-center text-white z-10 max-w-4xl px-6 h-full flex gap-[40vh] flex-col justify-evenly">
+            <h1 style={{ textShadow: '1px 1px 5px black' }} className="text-6xl md:text-8xl font-bold mb-6 text-yellow-400">
+              DJAWED TOURABI
+            </h1>
+
+            <div>
+              <div className="mb-8">
+                <h2 style={{ textShadow: '1px 1px 5px black' }} className="text-3xl md:text-5xl mb-4 text-yellow-400 courier-prime-bold">
+                  "Andi Swalah Ngoulhoum"
+                </h2>
+
+              </div>
+              <div className="flex md:flex-row gap-4 justify-center items-center">
+                {/* Trailer Button */}
+                {/* <button className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black px-8 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
                   <Play className="inline mr-2" size={20} />
                   Voir le Trailer
                 </button> */}
-              <a href='#apropos' className="  border-2 border-[#FDF0D5] text-[#FDF0D5] hover:bg-[#FDF0D5] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
-                <Info className="inline" size={20} />
-              </a>
-              <a href='#dateTournee' className="border-2 text-yellow-400 border-yellow-400 hover:bg-yellow-400 hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
-                <Calendar className="inline md:mr-2" size={20} />
-                <span className='hidden md:inline'>Voir les Dates</span>
-              </a>
-              <a href='#galery' className="border-2 border-[#C6D8D3] text-[#C6D8D3] hover:bg-[#C6D8D3] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
-                <Youtube className="inline" size={20} />
-              </a>
+                <a href='#apropos' className="  border-2 border-[#FDF0D5] text-[#FDF0D5] hover:bg-[#FDF0D5] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
+                  <Info className="inline" size={20} />
+                </a>
+                <a href='#dateTournee' className="border-2 text-yellow-400 border-yellow-400 hover:bg-yellow-400 hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
+                  <Calendar className="inline md:mr-2" size={20} />
+                  <span className='hidden md:inline'>Voir les Dates</span>
+                </a>
+                <a href='#galery' className="border-2 border-[#C6D8D3] text-[#C6D8D3] hover:bg-[#C6D8D3] hover:text-black px-4 py-4 rounded-full font-bold text-lg transition-all transform hover:scale-105 flex justify-center items-center">
+                  <Youtube className="inline" size={20} />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Floating elements animation */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none hidden">
-          <div className="absolute top-20 left-10 text-yellow-400 text-6xl animate-bounce">😂</div>
-          <div className="absolute top-40 right-20 text-orange-400 text-4xl animate-pulse">🎭</div>
-          <div className="absolute bottom-32 left-20 text-purple-400 text-5xl animate-bounce">🤣</div>
-        </div>
+          {/* Floating elements animation */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none hidden">
+            <div className="absolute top-20 left-10 text-yellow-400 text-6xl animate-bounce">😂</div>
+            <div className="absolute top-40 right-20 text-orange-400 text-4xl animate-pulse">🎭</div>
+            <div className="absolute bottom-32 left-20 text-purple-400 text-5xl animate-bounce">🤣</div>
+          </div>
+        </FadeInWhenVisible>
       </section>
 
 
