@@ -87,13 +87,21 @@ const App = () => {
 
       <section
         className="relative h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${affichePrincipaleLQ})`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center'
-        }}
+
       >
+        <img
+          src={affichePrincipaleLQ}
+          alt="Background"
+          style={{
+            width: '100%',
+            height: 'auto',
+            objectFit: 'cover',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            zIndex: -1
+          }}
+        />
         <div className="text-center text-white z-10 max-w-4xl px-6 h-full flex gap-[40vh] flex-col justify-evenly">
           <h1 style={{ textShadow: '1px 1px 5px black' }} className="text-6xl md:text-8xl font-bold mb-6 text-[#657874]">
             DJAWED TOURABI
