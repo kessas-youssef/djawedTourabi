@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, MapPin, Clock, Phone, ExternalLink, Users, Star, Mail, Instagram, Facebook, Youtube, LucideMousePointerClick, Info } from 'lucide-react';
 import affichePrincipaleLQ from './assets/djawedTourabi/djawed affiche sans text.webp'
-import afficheSecond from './assets/djawedTourabi/djawed affiche second.webp'
 import visage from './assets/djawedTourabi/visage.webp'
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -17,7 +16,7 @@ const App = () => {
       date: "09 Octobre 2025",
       time: "19h00",
       phone: "0560 76 54 06",
-      reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr?fbclid=PAb21jcANBTghleHRuA2FlbQIxMQABp-L0LdjRrqP-mW2HG_XfQyujzXQhR-8aX0ZsLc06dNG_2vEUQEgTbOUwDCaJ_aem_u0vCU-PyoULmdAA-ns0uYg"
+      reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr/event/djawed-tourabi"
     },
     {
       id: 2,
@@ -34,14 +33,14 @@ const App = () => {
       date: "13 Novembre 2025",
       time: "18h30",
       phone: "0560 76 54 06",
-      reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr?fbclid=PAb21jcANBTghleHRuA2FlbQIxMQABp-L0LdjRrqP-mW2HG_XfQyujzXQhR-8aX0ZsLc06dNG_2vEUQEgTbOUwDCaJ_aem_u0vCU-PyoULmdAA-ns0uYg "
+      reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr/event/djawed-tourabi "
     },
     {
       id: 4,
       place: "Hôtel Ibis",
       city: "Tlemcen",
-      date: "20 Novembre 2025",
-      time: "18h00",
+      date: "Bientot !",
+      time: "-",
       phone: "07 ** ** ** **"
     },
     {
@@ -59,7 +58,7 @@ const App = () => {
       date: "18 Décembre 2025",
       time: "18h00",
       phone: "0560 76 54 06",
-      reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr?fbclid=PAb21jcANBTghleHRuA2FlbQIxMQABp-L0LdjRrqP-mW2HG_XfQyujzXQhR-8aX0ZsLc06dNG_2vEUQEgTbOUwDCaJ_aem_u0vCU-PyoULmdAA-ns0uYg "
+      reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr/event/djawed-tourabi "
     }
   ];
 
@@ -83,14 +82,7 @@ const App = () => {
   ];
 
   return (
-    <div className="min-h-screen"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${afficheSecond})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'scroll'
-      }}
-    >
+    <div className="min-h-screen">
       {/* Landing Section */}
 
       <section
@@ -160,7 +152,7 @@ const App = () => {
               </p>
               <p className="text-gray-300 text-lg mb-8 leading-relaxed">
                 En 2025, il revient avec un nouveau spectacle : “3andi swala7 ngoulhoum” (j'ai des choses à dire). Un stand-up plus intime, où il explore cette fois son monde intérieur, ses contradictions et ses vérités… toujours avec le sourire et l'autodérision qui le caractérisent.
-                Djawed Tourabi, c'est un humour qui parle à tout le monde : parfois piquant, parfois tendre, mais toujours authentique
+                Djawed Tourabi, c'est un humour qui parle à tout le monde : parfois piquant, parfois tendre, mais toujours authentique.
               </p>
               <div className="flex gap-4">
                 <div className="text-center">

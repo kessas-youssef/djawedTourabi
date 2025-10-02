@@ -48,6 +48,7 @@
 }
 
 .top-right {
+  /* background-size: ; */
   top: -10px;
   right: -10px;
   border-left: none;
