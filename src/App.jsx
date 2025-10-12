@@ -18,14 +18,14 @@ const App = () => {
       phone: "0560 76 54 06",
       reservationLink: "https://theatre-la-fourmi-liberte.spectacles-dz.com/fr/events?keyword=Djawed+Tourabi&category=&country=&location=&pricemin=0&pricemax=10000"
     },
-    // {
-    //   id: 2,
-    //   place: "Artissimo",
-    //   city: "Alger",
-    //   date: "23 Octobre 2025",
-    //   time: "20h00",
-    //   phone: "070 49 28 41"
-    // },
+    {
+      id: 2,
+      place: "Artissimo - 28 Rue Didouche Mourad",
+      city: "Alger",
+      date: "25 Octobre 2025",
+      time: "18h00",
+      phone: "0770 49 28 41"
+    },
     {
       id: 3,
       place: "Théâtre la Fourmi",
