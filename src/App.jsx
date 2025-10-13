@@ -24,7 +24,8 @@ const App = () => {
       city: "Alger",
       date: "25 Octobre 2025",
       time: "18h00",
-      phone: "0770 49 28 41"
+      phone: "0770 49 28 41",
+      reservationLink: "https://event.dz-ticket.com/djawed-tourabi"
     },
     {
       id: 3,
